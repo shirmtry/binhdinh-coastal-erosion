@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="HTK">
+  <meta name="last-updated" content="2026-11-09">
+  <meta name="description" content="So sánh đường bờ biển Nhơn Lý, Cát Tiến, Mỹ Thành các năm 2020, 2023, 2026 với thanh trượt trước/sau. HTK 0396241674.">
+  <title>So sánh bờ biển 2020–2026 – Xói lở Bình Định – HTK</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a class="brand" href="/">🌊 Xói lở bờ biển Bình Định</a>
+      <div class="nav-links">
+        <a href="/">Trang chủ</a>
+        <a href="/so-sanh" class="active">So sánh bờ biển</a>
+        <a href="/about">Giới thiệu</a>
+        <a href="tel:0396241674" class="cta">📞 Liên hệ HTK</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="hero">
+      <h1>So sánh đường bờ biển trước – sau bão 2026</h1>
+      <span class="updated">Cập nhật: 09/11/2026</span>
+      <p>Chọn địa điểm và hai mốc thời gian, kéo thanh trượt để thấy bờ biển đã lùi vào đất liền bao nhiêu sau mùa mưa bão 2026.</p>
+    </div>
+
+    <p class="mock-note">⚠️ Dữ liệu mô phỏng – cập nhật 09/11/2026.</p>
+
+    <section>
+      <div class="controls">
+        <label>Địa điểm
+          <select id="loc-select"></select>
+        </label>
+        <label>Năm “trước” (bên trái)
+          <select id="year-before">
+            <option value="2020" selected>2020</option>
+            <option value="2023">2023</option>
+            <option value="2026">2026</option>
+          </select>
+        </label>
+        <label>Năm “sau” (bên phải)
+          <select id="year-after">
+            <option value="2020">2020</option>
+            <option value="2023">2023</option>
+            <option value="2026" selected>2026</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="legend">
+        <span class="l-land">Đất liền</span>
+        <span class="l-sea">Biển</span>
+        <span class="l-before">Bờ biển năm trước</span>
+        <span class="l-after">Bờ biển năm sau</span>
+      </div>
+
+      <div class="compare-wrap" id="compare-wrap">
+        <svg id="svg-before" viewBox="0 0 100 100" preserveAspectRatio="none" aria-label="Bản đồ bờ biển năm trước"></svg>
+        <div class="layer-after" id="layer-after">
+          <svg id="svg-after" viewBox="0 0 100 100" preserveAspectRatio="none" aria-label="Bản đồ bờ biển năm sau"></svg>
+        </div>
+        <div class="divider" id="divider"></div>
+      </div>
+      <div class="slider-row">
+        <input type="range" id="slider" min="0" max="100" value="50" aria-label="Thanh trượt so sánh trước sau">
+      </div>
+      <div class="year-tags">
+        <span class="before-tag" id="tag-before">Năm 2020</span>
+        <span class="after-tag" id="tag-after">Năm 2026</span>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="stats-title">Thống kê xói lở</h2>
+      <div class="table-scroll">
+        <table id="stats-table">
+          <thead>
+            <tr>
+              <th>Địa điểm</th>
+              <th>Bờ lùi 2020–2026 (m)</th>
+              <th>Tốc độ (m/năm)</th>
+              <th>Đất mất (ha)</th>
+              <th>Hộ bị đe doạ</th>
+              <th>Kè hư hỏng (m)</th>
+              <th>Mức độ</th>
+            </tr>
+          </thead>
+          <tbody id="stats-body"></tbody>
+        </table>
+      </div>
+      <p id="loc-desc" style="margin-top:10px"></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© 2026 <a href="https://zalo.me/0396241674" target="_blank" rel="noopener">HTK</a> · Hotline/Zalo: <a href="tel:0396241674">0396241674</a> · Email: <a href="mailto:htk.contact@gmail.com">htk.contact@gmail.com</a></div>
+      <div>Xói lở bờ biển Bình Định – dữ liệu mô phỏng phục vụ cộng đồng · Cập nhật: 09/11/2026</div>
+    </div>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
