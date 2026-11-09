@@ -38,7 +38,7 @@ venv/Scripts/python.exe -c "import sys; sys.path.insert(0,'api'); import index; 
 
 ## 🔗 Deploy
 
-- Vercel: xem `deploy_url.txt` (cập nhật sau khi deploy production).
+- Vercel (production): **https://binhdinh-coastal-erosion.vercel.app** (xem thêm `deploy_url.txt`).
 - GitHub: https://github.com/shirmtry/binhdinh-coastal-erosion
 
 ## 📞 Liên hệ HTK – 0396241674 – 09/11/2026
